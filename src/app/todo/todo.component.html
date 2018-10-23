@@ -1,0 +1,17 @@
+
+<div class="input-container">
+  <input type="text" #itemTitle>
+  <button (click)="onAdd(itemTitle)">ADD</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of itemList">
+    <span class="list-check-icon" (click)="alterCheck(item.$key, item.isChecked)">
+      <i class="material-icons">{{item.isChecked?'radio_button_checked':'radio_button_unchecked'}}</i>
+      <span class="list-text">{{item.title}}</span>
+    </span>
+    <span class="list-delete-icon" (click)="onDelete(item.$key)">
+      <i class="material-icons">delete</i>
+    </span>
+  </li>
+</ul>

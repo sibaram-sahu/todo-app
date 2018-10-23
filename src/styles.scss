@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+$base-font : 'Roboto', sans-serif;
+$back-color: #f2f2f2;
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: $base-font;
+  background-color:$back-color;
+}
+
+
+.card{
+  background-color:#fff;
+  width:400px;
+  padding:40px;
+  box-shadow: 0px 2px 2px #aaa;
+  margin:50px auto;
+
+  & ul{
+    list-style: none;
+    padding-left:0px;
+    margin-top:50px;
+  }
+
+  & li{
+    width:100%;
+    border-bottom: 1px solid #ccc;
+    padding:15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .list-check-icon{
+      display: flex;
+      align-items: center;
+      color:green;
+      cursor: pointer;
+    }
+
+    & .list-delete-icon{
+      color:red;
+      cursor: pointer;
+    }
+
+    & .list-text{
+      margin-left:15px;
+    }
+  }
+
+}
+
+.app-title{
+  text-align: center;
+  margin-top: 150px;
+}
+
+
+.input-container{
+  width:100%;
+  display: flex;
+
+  & input{
+    width:80%;
+    height:40px;
+    text-indent: 10px;
+    font-size: 16px;
+  }
+
+  & button{
+    width:20%;
+    height:43px;
+    background-color:indigo;
+    border:1px solid indigo;
+    color:#fff;
+    cursor: pointer;
+  }
+
+  & button:hover{
+    opacity: 0.7;
+  }
+}
